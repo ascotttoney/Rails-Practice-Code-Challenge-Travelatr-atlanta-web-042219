@@ -1,0 +1,14 @@
+<h1>Travel Bloggers</h1>
+
+<ul>
+  <% @bloggers.each do |blogger| %>
+  <li>
+    <%= link_to blogger.name, blogger_path(blogger) %>
+    <br>
+  </li>
+  <% end %>
+</ul>
+
+<br>
+
+<h4><%= link_to 'Add New Blogger', new_blogger_path %></h4>
